@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>MeetApp</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-full">
+        <div class="row">
+            <div class="col-lg-12 text-center v-center">
+                <h1>Welcome to MeetApp</h1>
+                <p class="lead">A recommender for Meetup users</p>
+                <br>
+               <!--  <p>{{error}}</p> -->
+                <br>
+                <form class="col-lg-12" action="{{url_for('landing')}}" method="POST">
+                    <div class="input-group" style="width:370px;text-align:center;margin:0 auto;">
+                        <input class="form-control input-lg" title="Please enter a valid user-id." placeholder="Enter your Meetup user-id or leave blank." type="text" name="text" >
+                       <br>
+                       <br>
+
+                        
+                    </div>
+                    <input class="form-control input-lg" title="Please enter a valid description." placeholder="Describe Meetup groups you like." type="summary" name="summary">
+                    <br>
+                    {{error}}
+                    <br>
+                    <br>
+                     <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit">GO</button></span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+
+                </form>
+            </div>
+
+        </div>
+        <!-- /row -->
+<!--     <div class="form-group">
+  <label for="usr">Please describe groups that interest you.</label>
+  <input type="text" class="form-control" id="usr">
+    </div> -->
+
+
+    </div>
+            <a href="/random">Random users!</a></div>
+
+                    <footer class="footer" style="background-color:#c2c2c2">
+                <p align="center"> Don't know your id? Go to the meetup site <a href='http://www.meetup.com/members/profile/'> (linked here) </a>, select "profile" <br> from the drop down menu on the top right. Your id is the number in the url.</p>
+</footer>
+    <!-- /container full -->
+
+ <!--    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Hello.</h3>
+                    </div>
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Hello.</h3>
+                    </div>
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Hello.</h3>
+                    </div>
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <br>
+                <br>
+                <p class="pull-right"><a href="http://www.bootply.com">Template from Bootply</a> &nbsp; ©Copyright 2014 ACME<sup>TM</sup> Brand.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

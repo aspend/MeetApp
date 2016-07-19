@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Meetapp</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-full2">
+    <div>MeetApp: <a href="/">Home</a></div>
+    <br>
+    <br>
+    
+    <h2 align="center" >You might want to connect with these people:</h2>
+
+<!--
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="row">
+            <div class="col-md-12">
+
+                <figure class="figure">
+                  <img src="http://lorempixel.com/200/200" class="figure-img img-fluid img-rounded" alt="Web Design">
+                  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                  <p align="justify">Lots of text here...With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a .clearfix and o</p>
+                </figure>
+
+
+            </div>
+        </div> -->
+    
+    <div class="container">
+<!--     <p align='center'>{{user_id}} <br> {{error}} <br> {{error2}} <br> {{error3}} <br> {{error4}} <br> {{test}}</p> -->
+    </div>
+    </div>
+    {% for result in results %}
+    <div class="container">
+        <h2>{{df['name'][result]}}</h2>
+        <div class="row">
+            <div class="col-md-12">
+            <a href = {{df['link'][result]}}>
+                <img style='float:left;width:200px;height:200px; margin-right:10px;' src={{df['photo_link'][result] if df['photo_link'][result] else "http://loremflickr.com/320/240/animal?random="+ loop.index|string}} alt="http://loremflickr.com/320/240/animal" class="img-circle" >
+                </a>
+                <p > I'm living in {{ df['city'][result] }} {% if df['hometown'][result] %} and I'm from {{ df['hometown'][result] }} {% endif %} </p>
+                <p> My interests include: {% for topic in df['topic_names'][result] %} {{topic}},{% endfor %} and more.</p>
+                {% for key in df['other_services'][result].keys() %} 
+                <p>My {{key}} is <a href= {% if key=='twitter' %}{{"https://twitter.com/"+df['other_services'][result][key]['identifier']}} {% else %} {{df['other_services'][result][key]['identifier']}} {% endif %}>{{df['other_services'][result][key]['identifier']}} </a></p>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+    
+
+        <!-- script references -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</div>
+
+</body>
+
+</html>

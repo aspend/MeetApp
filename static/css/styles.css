@@ -1,0 +1,105 @@
+html,body {
+  height:100%;
+}
+
+h1 {
+  font-family: Arial,sans-serif
+  font-size:80px;
+  color:#DDCCEE;
+}
+
+h2 {
+  font-family: Arial,sans-serif
+  font-size:80px;
+  color:"black";
+}
+
+.lead {
+	color:#DDCCEE;
+}
+
+h1 {
+    font-family: Arial,sans-serif font-size:80px;
+    color: #E5E5E5;
+}
+
+.lead {
+    color: #E5E5E5;
+}
+
+/* Custom container */
+/*.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background-color:#110022;
+  color:#eee;
+  overflow:hidden;
+}*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #5792BD;
+    border-color: #5792BD;
+}
+
+/*.container-full a {
+  color:#efefef;
+  text-decoration:none;
+}*/
+
+/*.v-center {
+  margin-top:7%;
+}*/
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+
+.container-full {
+ margin: 0 auto;
+ width: 100%;
+ min-height:100%;
+ background: #FFF url('meetapp_home.png'
+) no-repeat center top;
+ color:#eee;
+ overflow:hidden;
+ background-size:cover;
+}
+
+.container-full2 {
+ margin: 0 auto;
+ width: 100%;
+ padding: 20px;
+ background: #000 url('meetapp_rec.png'
+) no-repeat center top;
+ color:#eee;
+ overflow:hidden;
+ background-size:head;
+}
+
+.container-new {
+ margin: 0 auto;
+ width: 100%;
+ min-height:100%;
+ background: #FFF url('1906811.jpg'
+) no-repeat center top;
+ color:#eee;
+ overflow:hidden;
+ background-size:cover;
+}
+
+
+/*.container-full {
+ margin: 0 auto;
+ width: 100%;
+ min-height:100%;
+ background: #FFF url(http://cdn.moneycrashers.com/wp-content/uploads/2015/10/fancy-dinner-restaurant.jpg
+) no-repeat center top;
+ color:#eee;
+ overflow:hidden;
+ background-size:cover;
+}*/
