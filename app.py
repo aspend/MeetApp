@@ -36,7 +36,7 @@ users_wanted = list(member_data.index.values)
 member_data['score']= member_data['n_connected']+ member_data['n_topics']
 groups_topics = json.load(open('data/app_gensim/group_topics.txt'))
 users_groups = json.load(open('data/app_gensim/users_groups_filt.txt'))
-a
+
 
 dfref = member_data.to_dict('dict')
 
